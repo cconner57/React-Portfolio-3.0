@@ -1,0 +1,11 @@
+@import '../base/index.scss';
+
+@mixin links() {
+	font-size: $a;
+	font-weight: bold;
+	text-decoration: none;
+	color: $altText;
+	&:hover {
+		color: $neutral;
+	}
+}

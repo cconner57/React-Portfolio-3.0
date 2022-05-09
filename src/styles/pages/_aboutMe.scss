@@ -1,0 +1,54 @@
+.aboutMe {
+	color: $text;
+	display: flex;
+	flex-direction: column;
+	background-color: $background;
+	height: 90vh;
+	clip-path: ellipse(67% 60% at 50% 40%);
+	background: url(../../assets/curve.png) no-repeat bottom center, $background;
+	background-size: contain;
+	padding-top: 50px;
+	padding-left: 6rem;
+    &__name {
+        font-size: 50px;
+        line-height: 67px;
+        font-weight: 700;
+    }
+	&__title {
+		font-weight: 400;
+		font-size: 50px;
+		line-height: 67px;
+	}
+	&__description {
+		width: 641px;
+		font-size: 20px;
+		line-height: 40px;
+		font-weight: 300;
+		margin-top: 33px;
+	}
+	&__resume {
+		@include button(0.5rem, 1rem, flex-start);
+		margin-top: 40px;
+		font-size: 24px;
+	}
+	&__links {
+		margin-top: 31px;
+		display: flex;
+		&__github {
+			margin-right: 1.25rem;
+		}
+		&__github,
+		&__linkedin {
+			align-items: center;
+			background-color: #fff;
+			border-radius: 50%;
+			display: flex;
+			height: 60px;
+			justify-content: center;
+			width: 60px;
+			img {
+				padding: 1.05rem;
+			}
+		}
+	}
+}

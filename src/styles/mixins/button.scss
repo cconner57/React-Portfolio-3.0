@@ -1,0 +1,11 @@
+@mixin button($borderRadius: 0.5rem, $padding: 1rem 1.5rem, $align: flex-end) {
+	background-image: $gradient;
+	align-self: $align;
+	border-radius: $borderRadius;
+	color: $text;
+	cursor: pointer;
+	padding: $padding;
+	&:hover {
+		background-image: $gradientHover;
+	}
+}

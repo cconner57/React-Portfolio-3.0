@@ -1,0 +1,28 @@
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: $background;
+	padding: 0 6rem;
+	&__name {
+		font-weight: 700;
+		font-size: 3.5rem;
+		line-height: 67px;
+		color: $text;
+	}
+	&__items {
+		display: flex;
+		justify-content: space-evenly;
+		width: min(600px, 60%);
+		a {
+			font-size: 1.5rem;
+			line-height: 2rem;
+			text-decoration: none;
+			color: $text;
+			transition: color 0.3s;
+			&:hover {
+				color: hsl(0, 0%, 50%);
+			}
+		}
+	}
+}
