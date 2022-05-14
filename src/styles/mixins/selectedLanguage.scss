@@ -1,0 +1,10 @@
+@mixin selectedLanguage() {
+    width: 16rem;
+	padding: 0.5rem;
+	border-radius: 1rem;
+	margin: 0.5rem 0;
+	background-color: $background;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}

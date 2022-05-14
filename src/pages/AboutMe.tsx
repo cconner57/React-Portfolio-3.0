@@ -4,10 +4,8 @@ const AboutMe = () => {
 			<h1 className="aboutMe__name">I'm Chris</h1>
 			<p className="aboutMe__title">Full-Stack Developer</p>
 			<p className="aboutMe__description">
-				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae
-				beatae aliquid porro aperiam amet praesentium perspiciatis, illo,
-				voluptatum mollitia at voluptas, fuga temporibus consequatur suscipit
-				quae animi? Excepturi, doloremque ratione?
+				I enjoy building software that makes peoples' lives easier by writing
+				elegant, performant, and maintainable frontend code. 
 			</p>
 			<button className="aboutMe__resume">Download Resume</button>
 			<div className="aboutMe__links">

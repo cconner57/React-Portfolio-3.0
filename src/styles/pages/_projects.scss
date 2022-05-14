@@ -1,3 +1,105 @@
 .projects {
-    color: $text;
+	color: $text;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 5vh;
+	margin-bottom: 5vh;
+	height: 95vh;
+	h2 {
+		font-size: 50px;
+	}
+	&__container {
+		display: flex;
+		margin-top: 3rem;
+		width: min(80%, 80vw);
+		max-height: max(80%, 80vw);
+		border-radius: 0.75rem;
+		background-color: $accentBackground;
+		box-shadow: 0 4px 20px hsla(0, 0%, 40%, 0.5);
+	}
+	&__sidebar {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 25%;
+		padding: 0.75rem 0;
+		border-radius: 0.75rem 0 0 0.75rem;
+		background-color: $background;
+	}
+	&__language {
+		@include selectedLanguage();
+		box-shadow: 0px 0px 5px 2px hsla(0, 0%, 33%, 0.6);
+		transition: box-shadow 0.3s ease-in-out;
+		&:hover {
+			box-shadow: 0px 0px 5px 3px hsla(0, 0%, 60%, 0.6);
+		}
+		p {
+			margin-left: 1rem;
+			font-size: $p;
+			font-weight: 700;
+		}
+	}
+	&__language--selected {
+		@include selectedLanguage();
+		box-shadow: 0px 0px 5px 3px hsla(0, 0%, 60%, 0.6);
+		p {
+			margin-left: 1rem;
+			font-size: $p;
+			font-weight: 700;
+		}
+	}
+	&__image {
+		width: 28px;
+		height: 28px;
+		margin-left: 0.5rem;
+	}
+
+	&__main {
+		display: flex;
+		justify-content: space-around;
+		width: 75%;
+		margin-top: 1rem;
+		padding: 0 2rem;
+	}
+	&__featured {
+		background-color: hsl(0, 0%, 100%);
+		z-index: 10;
+		div {
+			a {
+				align-items: center;
+				background-color: $background;
+				border-radius: 0.75rem;
+				box-shadow: 0px 0px 10px 4px hsl(0, 0%, 40%);
+				color: $text;
+				display: flex;
+				flex-direction: column;
+				height: 11rem;
+				overflow: hidden;
+				padding-bottom: 1rem;
+				text-decoration: none;
+				transition: box-shadow 0.3s ease-in-out;
+				width: 9rem;
+				&:hover {
+					box-shadow: 0px 0px 10px 4px hsla(0, 0%, 70%);
+				}
+				img {
+					height: 100px;
+					object-fit: cover;
+					width: 100%;
+				}
+				p {
+					font-size: $p;
+					padding-top: 0.5rem;
+					&:last-child {
+						padding-top: 5px;
+						background: $gradient;
+						background-clip: text;
+						-webkit-text-fill-color: transparent;
+					}
+				}
+			}
+		}
+	}
 }
