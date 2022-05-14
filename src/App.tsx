@@ -1,5 +1,6 @@
 import { Suspense, lazy } from "react";
 import Navbar from "./components/Navbar";
+import UnderConstruction from "./components/UnderConstruction";
 
 const App = () => {
 	const AboutMe = lazy(() => import("./pages/AboutMe"));
@@ -8,15 +9,16 @@ const App = () => {
 	const Contact = lazy(() => import("./pages/Contact"));
 
 	return (
-		<>
+		<div>
 			<Navbar />
+			<UnderConstruction />
 			<Suspense fallback={<div>Loading...</div>}>
 				<AboutMe />
 				<Projects />
 				<History />
 				<Contact />
 			</Suspense>
-		</>
+		</div>
 	);
 };
 
